@@ -25,7 +25,7 @@ body {
 
   margin: 30px;
   width: 80%;
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 .quote-author {
@@ -149,7 +149,7 @@ body {
     margin: 80px;
     width: 600px;
 
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .quote {
