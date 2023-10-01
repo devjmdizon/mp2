@@ -14,29 +14,58 @@
     <title>Weather App v2</title>
   </head>
   <body>
-    <div id="main" class="main">
-      <div class="quotes-container">
+    <section id="main" class="main">
+      <section class="quotes-container">
         <p id="quote" class="quote"></p>
         <p id="quote-author" class="quote-author"></p>
-      </div>
+      </section>
 
-      <div class="details-container">
-        <div class="top-container">
-          <div class="greeting-container">
+      <section id="detailsContainer" class="details-container">
+        <section id="topContainer" class="top-container">
+          <form action="">
+            <input
+              id="location"
+              class="location"
+              type="text"
+              placeholder="Enter location"
+            />
+            <button type="submit" id="submit-btn" class="submit-btn">
+              Submit
+            </button>
+          </form>
+        </section>
+
+        <section id="bottomContainer" class="bottom-container">
+          <!-- <h3 id="timezone" class="timezone">IN LONDON, UK</h3> -->
+          <section class="greeting-container">
             <i class="fa-solid fa-sun"></i>
-            <p class="greeting">GOOD MORNING, IT'S CURRENTLY</p>
-          </div>
-          <h1 class="time">11:37</h1>
-        </div>
+            <p id="greeting" class="greeting">GOOD MORNING, IT'S CURRENTLY</p>
+          </section>
+          <section class="time-container">
+            <h1 id="time" class="time"></h1>
+            <p id="more-btn" class="more-btn">MORE &darr;</p>
+          </section>
+        </section>
+      </section>
 
-        <div class="bottom-container">
-          <h3>IN LONDON, UK</h3>
-          <p class="more-btn">
-            MORE <i class="fa-solid fa-arrow-down arrow-down"></i>
-          </p>
+      <section id="weather-descript" class="weather-descript">
+        <div id="container" class="container">
+          <div class="left-section">
+            <p class="other">Current Timezone</p>
+            <p id="timezone" class="timezone other descript"></p>
+            <p class="other">Date Today:</p>
+            <p id="dateToday" class="other descript">295</p>
+          </div>
+
+          <div class="right-section">
+            <p class="other">Week</p>
+            <p id="week" class="other descript"></p>
+            <p class="other">Day of the week</p>
+            <p id="dayofWeek" class="dayofWeek other descript">Sunday</p>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

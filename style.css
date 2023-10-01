@@ -41,6 +41,25 @@ body {
   flex-direction: column;
 }
 
+.submit-btn {
+  background: rgb(250, 250, 250);
+  border: none;
+  padding: 8px;
+  margin: 20px;
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: transparent;
+  color: white;
+}
+
+::placeholder {
+  color: rgb(231, 233, 235, 0.5);
+}
+
 .greeting-container {
   display: flex;
   gap: 1rem;
@@ -52,7 +71,7 @@ body {
 }
 
 .time {
-  font-size: 100px;
+  font-size: 60px;
 }
 
 .bottom-container {
@@ -63,9 +82,24 @@ body {
   font-size: 15px;
 }
 
+.location {
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-color 0.3s ease;
+  background: transparent;
+
+  font-size: 35px;
+}
+
+.location:focus {
+  border-bottom-color: white;
+}
+
 .more-btn {
   padding: 5px;
   width: 100px;
+  margin: 10px;
   border: 2px solid white;
   background-color: white;
 
@@ -92,7 +126,35 @@ body {
   transform: scaleY(-5px);
 }
 
-@media only screen and (min-width: 760px) and (max-width: 960px) {
+.weather-descript {
+  display: none;
+  padding: 30px;
+
+  background-color: rgb(201, 201, 201, 0.8);
+}
+
+.container {
+  height: 100vh;
+}
+
+.left-section,
+.right-section {
+  gap: 1em;
+}
+
+.other {
+  color: black;
+  margin: 25px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.descript {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1020px) {
   main {
     height: 100vh;
   }
@@ -110,7 +172,7 @@ body {
   .top-container {
     display: flex;
     flex-direction: column;
-    margin: 470px 40px 0;
+    margin: 400px 40px 0;
   }
 
   .greeting {
@@ -118,15 +180,13 @@ body {
   }
 
   .time {
-    font-size: 150px;
+    font-size: 80px;
   }
 
   .bottom-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     margin: 0 40px;
-
     font-size: 15px;
   }
 
@@ -135,9 +195,31 @@ body {
     margin-top: 30px;
     width: 100px;
   }
+
+  .weather-descript {
+    /* display: none; */
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+
+    background-color: rgb(201, 201, 201, 0.8);
+  }
+
+  .container {
+    background: transparent;
+  }
+
+  .other {
+    color: black;
+    font-size: 20px;
+  }
+
+  .descript {
+    font-size: 20px;
+  }
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1024px) {
   body {
     background-size: cover;
     background-repeat: no-repeat;
@@ -156,36 +238,77 @@ body {
     font-weight: 100;
   }
 
-  .details-container {
-    margin: 285px 0 0 0;
+  .location {
+    width: 300px;
+    margin: 20px;
+  }
+
+  .submit-btn {
+    border: none;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 20px;
+
+    cursor: pointer;
   }
 
   .top-container {
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
+    margin-left: 40px;
   }
 
   .greeting {
     font-size: 30px;
   }
 
+  .time-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .time {
-    font-size: 200px;
+    font-size: 120px;
+  }
+
+  .timezone {
+    font-size: 30px;
   }
 
   .bottom-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     margin: 0 100px;
   }
 
   .more-btn {
-    padding: 10px;
-    width: 100px;
-    margin: 0 50px 0px 0;
+    padding: 15px;
+    width: 120px;
+    height: 50px;
 
     font-size: 1rem;
+  }
+
+  .weather-descript {
+    display: none;
+    justify-content: space-around;
+    width: 100%;
+    padding: 35px;
+  }
+
+  .left-section,
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .other {
+    color: black;
+  }
+
+  .descript {
+    font-size: 20px;
   }
 }
