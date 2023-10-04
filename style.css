@@ -47,12 +47,14 @@ body {
   padding: 8px;
   margin: 20px;
   border-radius: 20px;
+  color: rgb(48, 48, 48);
 
   cursor: pointer;
 }
 
 .submit-btn:hover {
   background: transparent;
+  border: 1px solid white;
   color: white;
 }
 
@@ -255,7 +257,7 @@ body {
   .top-container {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
+    margin-left: 20px;
   }
 
   .greeting {
@@ -268,7 +270,7 @@ body {
   }
 
   .time {
-    font-size: 120px;
+    font-size: 100px;
   }
 
   .timezone {
@@ -284,10 +286,10 @@ body {
 
   .more-btn {
     padding: 15px;
-    width: 120px;
+    width: 100px;
     height: 50px;
 
-    font-size: 1rem;
+    font-size: 15px;
   }
 
   .weather-descript {
@@ -300,8 +302,10 @@ body {
   .left-section,
   .right-section {
     display: flex;
-    flex-direction: column;
-    gap: 2em;
+    width: auto;
+    flex-direction: row;
+    justify-content: start;
+    gap: 15px;
   }
 
   .other {
