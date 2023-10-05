@@ -14,7 +14,7 @@ window.addEventListener("load", async () => {
   const quote = quoteData.quotes[randomIndex].quote;
   const author = quoteData.quotes[randomIndex].author;
   quoteText.textContent = `" ${quote} "`;
-  authorText.textContent = author;
+  authorText.textContent = `- ${author}`;
 });
 
 async function main(e) {
@@ -67,7 +67,7 @@ async function main(e) {
       weatherDescript.style.display = "flex";
       container.style.display = "flex";
       detailsContainer.style.margin = `40px 0 0px 20px`;
-      topContainer.style.margin = `200px 30px 0`;
+      topContainer.style.margin = `150px 15px 0`;
       moreBtn.textContent = `LESS ${arrowDownHTML}`;
     } else {
       weatherDescript.style.display = "none";
