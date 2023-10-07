@@ -6,6 +6,7 @@ import changeGreeting from "./src/changeGreeting";
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("quote-author");
 const form = document.querySelector("form");
+const tempLabel = document.getElementById("tempLabel");
 
 window.addEventListener("load", async () => {
   const quoteData = await fetchData("https://dummyjson.com/quotes");
@@ -25,6 +26,8 @@ async function main(e) {
   const weatherData = await fetchData(weatherApi);
   console.log(weatherData);
 
+  const temp = parseInt(weatherData.main.temp - 273.15).toFixed(1);
+  tempLabel.textContent = `${temp}°C`;
   const lat = weatherData.coord.lat;
   const long = weatherData.coord.lon;
   const timeApiKey = "3d6c2a4ea16c430888e211d2604d23fd";
@@ -67,7 +70,7 @@ async function main(e) {
       weatherDescript.style.display = "flex";
       container.style.display = "flex";
       detailsContainer.style.margin = `40px 0 0px 20px`;
-      topContainer.style.margin = `150px 15px 0`;
+      topContainer.style.margin = `100px 15px 0`;
       moreBtn.textContent = `LESS ${arrowDownHTML}`;
     } else {
       weatherDescript.style.display = "none";
