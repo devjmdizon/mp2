@@ -41,8 +41,8 @@ async function main(e) {
   const timeZone = document.getElementById("timezone");
   timeZone.textContent = `${timeData.timezone}`;
 
-  const week = document.getElementById("week");
-  week.textContent = `${timeData.week}`;
+  const weather = document.getElementById("weather");
+  weather.textContent = `${weatherData.weather[0].main}`;
 
   const dateToday = document.getElementById("dateToday");
   dateToday.textContent = `${timeData.date}`;

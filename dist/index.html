@@ -12,37 +12,66 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App v2</title>
-    <script type="module" crossorigin src="/mp2/assets/index-d46f3bea.js"></script>
-    <link rel="stylesheet" href="/mp2/assets/index-497be31d.css">
+    <script type="module" crossorigin src="/mp2/assets/index-0bd80a44.js"></script>
+    <link rel="stylesheet" href="/mp2/assets/index-2d83f5a7.css">
   </head>
   <body>
-    <div id="main" class="main">
-      <div class="quotes-container">
-        <p class="quote">
-          "The science of operations, as derived from mathematics more
-          especially, is a science of itself, and has its own abstract truth and
-          value."
-        </p>
-        <p class="quote-author">Ada Lovelace</p>
-      </div>
+    <section id="main" class="main">
+      <section class="quotes-container">
+        <div>
+          <p id="quote" class="quote"></p>
+          <p id="quote-author" class="quote-author"></p>
+        </div>
+        <div>
+          <p id="tempLabel" class="tempLabel">0°C</p>
+        </div>
+      </section>
 
-      <div class="details-container">
-        <div class="top-container">
-          <div class="greeting-container">
-            <i class="fa-solid fa-sun"></i>
-            <p class="greeting">GOOD MORNING, IT'S CURRENTLY</p>
+      <section id="detailsContainer" class="details-container">
+        <section id="topContainer" class="top-container">
+          <form action="">
+            <input
+              id="location"
+              class="location"
+              type="text"
+              placeholder="Enter location"
+            />
+            <button type="submit" id="submit-btn" class="submit-btn">
+              Submit
+            </button>
+          </form>
+        </section>
+
+        <section id="bottomContainer" class="bottom-container">
+          <section class="greeting-container">
+            <i class="fa-solid fa-sun weather"><img src="" alt="" /></i>
+            <p id="greeting" class="greeting">GOOD MORNING, IT'S CURRENTLY</p>
+          </section>
+          <section class="time-container">
+            <h1 id="time" class="time"></h1>
+            <p id="more-btn" class="more-btn">MORE &darr;</p>
+          </section>
+        </section>
+      </section>
+
+      <section id="weather-descript" class="weather-descript">
+        <div id="container" class="container">
+          <div class="left-section">
+            <p class="other">Current Timezone</p>
+            <p id="timezone" class="timezone other descript"></p>
+            <p class="other">Date Today:</p>
+            <p id="dateToday" class="other descript"></p>
           </div>
-          <h1 class="time">11:37</h1>
-        </div>
 
-        <div class="bottom-container">
-          <h3>IN LONDON, UK</h3>
-          <p class="more-btn">
-            MORE <i class="fa-solid fa-arrow-down arrow-down"></i>
-          </p>
+          <div class="right-section">
+            <p class="other">Weather</p>
+            <p id="weather" class="other descript"></p>
+            <p class="other">Day of the week</p>
+            <p id="dayofWeek" class="dayofWeek other descript"></p>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
     
   </body>
 </html>
