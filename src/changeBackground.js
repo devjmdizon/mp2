@@ -20,6 +20,6 @@ export default async function changeBackground(time) {
   } else {
     changeGreeting(time);
     return (document.body.style.backgroundImage =
-      'url("https://wallpapercave.com/wp/wp2737727.jpg")');
+      'url("https://images.pexels.com/photos/355887/pexels-photo-355887.jpeg?cs=srgb&dl=pexels-pixabay-355887.jpg&fm=jpg")');
   }
 }

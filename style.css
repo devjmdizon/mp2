@@ -10,7 +10,7 @@
 
 body {
   height: 100vh;
-  background: url("src/asset/morning-image.jpeg");
+  background: url("https://wallpapercave.com/wp/wp10712591.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -30,7 +30,8 @@ body {
 
   margin: 30px;
   width: 80%;
-  font-size: 15px;
+  font-size: 25px;
+  font-weight: 900;
 }
 
 .quote {
