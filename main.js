@@ -2,31 +2,22 @@ import "./style.css";
 import fetchData from "./src/fetchData";
 import changeBackground from "./src/changeBackground";
 import changeGreeting from "./src/changeGreeting";
+import displayQuote from "./src/displayQuote";
 
-const quoteText = document.getElementById("quote");
-const authorText = document.getElementById("quote-author");
 const form = document.querySelector("form");
 const tempLabel = document.getElementById("tempLabel");
 
-window.addEventListener("load", async () => {
-  const quoteData = await fetchData("https://dummyjson.com/quotes");
-  const quotesArray = quoteData.quotes;
-  const randomIndex = Math.floor(Math.random() * quotesArray.length);
-  const quote = quoteData.quotes[randomIndex].quote;
-  const author = quoteData.quotes[randomIndex].author;
-  quoteText.textContent = `" ${quote} "`;
-  authorText.textContent = `- ${author}`;
-});
-
+setInterval(displayQuote, 10000);
 async function main(e) {
   e.preventDefault();
+
   const location = document.getElementById("location").value;
   const weatherApiKey = "dcd6046ddeb23f20f5c953f9d404473d";
   const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${weatherApiKey}`;
   const weatherData = await fetchData(weatherApi);
   console.log(weatherData);
 
-  const temp = parseInt(weatherData.main.temp - 273.15).toFixed(1);
+  const temp = parseInt(weatherData.main.temp - 273.15).toFixed(0);
   tempLabel.textContent = `${temp}°C`;
   const lat = weatherData.coord.lat;
   const long = weatherData.coord.lon;
@@ -69,6 +60,7 @@ async function main(e) {
     if (weatherDescript.style.display === "none") {
       weatherDescript.style.display = "flex";
       container.style.display = "flex";
+      tempLabel.style.display = "block";
       detailsContainer.style.margin = `40px 0 0px 20px`;
       topContainer.style.margin = `100px 15px 0`;
       moreBtn.textContent = `LESS ${arrowDownHTML}`;
@@ -81,4 +73,4 @@ async function main(e) {
   });
 }
 
-form.addEventListener("submit", main);
+form.addEventListener("input", main);

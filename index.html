@@ -20,33 +20,32 @@
           <p id="quote" class="quote"></p>
           <p id="quote-author" class="quote-author"></p>
         </div>
-        <div>
-          <p id="tempLabel" class="tempLabel">0°C</p>
-        </div>
       </section>
 
       <section id="detailsContainer" class="details-container">
         <section id="topContainer" class="top-container">
           <form action="">
-            <input
-              id="location"
-              class="location"
-              type="text"
-              placeholder="Enter location"
-            />
-            <button type="submit" id="submit-btn" class="submit-btn">
-              Submit
-            </button>
+            <p class="greeting">
+              Right now in
+              <input
+                id="location"
+                class="location"
+                type="text"
+                placeholder="Enter desired city"
+              />
+            </p>
           </form>
         </section>
 
         <section id="bottomContainer" class="bottom-container">
           <section class="greeting-container">
-            <i class="fa-solid fa-sun weather"><img src="" alt="" /></i>
-            <p id="greeting" class="greeting">GOOD MORNING, IT'S CURRENTLY</p>
+            <p id="greeting" class="greeting"></p>
           </section>
           <section class="time-container">
-            <h1 id="time" class="time"></h1>
+            <div>
+              <h1 id="time" class="time"></h1>
+              <p id="tempLabel" class="tempLabel">0°C</p>
+            </div>
             <p id="more-btn" class="more-btn">MORE &darr;</p>
           </section>
         </section>
@@ -68,6 +67,10 @@
             <p id="dayofWeek" class="dayofWeek other descript"></p>
           </div>
         </div>
+      </section>
+
+      <section>
+        <p></p>
       </section>
     </section>
     <script type="module" src="/main.js"></script>

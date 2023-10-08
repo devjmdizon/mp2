@@ -10,7 +10,7 @@
 
 body {
   height: 100vh;
-  background: url(images/morning-image.jpeg);
+  background: url("src/asset/morning-image.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,11 +33,17 @@ body {
   font-size: 15px;
 }
 
+.quote {
+  font-style: italic;
+  margin: 10px;
+}
+
 .tempLabel {
+  display: none;
   margin: 10px;
   font-size: 2em;
   text-align: center;
-  width: 25%;
+  width: 50%;
 
   border: 3px solid white;
   border-radius: 20px;
@@ -45,6 +51,7 @@ body {
 
 .quote-author {
   font-weight: 600;
+  text-align: right;
 }
 
 .details-container {
@@ -102,15 +109,20 @@ body {
 .location {
   width: 200px;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   transition: border-color 0.3s ease;
   background: transparent;
+  text-align: center;
 
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .location:focus {
   border-bottom-color: white;
+}
+
+input[type="text"]:focus {
+  background: transparent;
 }
 
 .more-btn {
