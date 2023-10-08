@@ -10,7 +10,6 @@ const tempLabel = document.getElementById("tempLabel");
 setInterval(displayQuote, 10000);
 async function main(e) {
   e.preventDefault();
-
   const location = document.getElementById("location").value;
   const weatherApiKey = "dcd6046ddeb23f20f5c953f9d404473d";
   const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${weatherApiKey}`;
