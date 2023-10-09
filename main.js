@@ -22,7 +22,7 @@ async function main(e) {
   e.preventDefault();
   const location = document.getElementById("location").value;
   const weatherData = await fetchWeather(location);
-  // console.log(weatherData);
+  console.log(weatherData);
   const temp = parseInt(weatherData.main.temp - 273.15).toFixed(0);
   const lat = weatherData.coord.lat;
   const long = weatherData.coord.lon;
